@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+<body>
+  <%- include('./partials/header.ejs') %>
+  <main>
+    <article class="content sites">
+      <h2>All Sites</h2>
+      <% if (sites.length > 0) { %>
+        <% sites.forEach(site => { %>
+          <a class="single" href="/sites/<%= site._id %>">
+            <h3 class="title"><%= site.name %></h3>
+      
+          </a>
+        <% }) %>
+      <% } else { %>
+        <p>There are no sites.</p>
+      <% } %>
+    </article>
+  </main>
+  <%- include('./partials/footer.ejs') %>
+
+</body>
+</html>
