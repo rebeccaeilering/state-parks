@@ -1,7 +1,9 @@
 const express = require('express');
+var sassMiddleware = require('node-sass-middleware');
 const mongoose = require('mongoose');
 const siteRoutes = require('./routes/siteRoutes');
 const { render } = require('ejs');
+var path = require('path');
 
 const app = express();
 
@@ -12,6 +14,15 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
 
 app.set('view engine', 'ejs');
 
+app.use(sassMiddleware({
+  /* Options */
+  src: path.join(__dirname, 'sass'),
+  dest: path.join(__dirname, 'public'),
+  debug: true,
+  outputStyle: 'compressed',
+  // prefix:  '/prefix'  // Where prefix is at <link rel="stylesheets" href="prefix/style.css"/>
+}));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
