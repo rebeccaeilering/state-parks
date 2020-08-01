@@ -2,18 +2,20 @@
 <html lang="en">
   <%- include('./partials/head.ejs') %>
 <body>
-  <%- include('./partials/header.ejs') %>
-  <article class="content details">
-    <h2><%= site.name %></h2>
-    <div class="main-content">
-      <address><%= site.address %><br><%= site.city %>, <%= site.state %> <%= site.zip %></address>
-      <p><%= site.phone %></p>
-      <p>Coordinates: <%= site.lat %>, <%= site.long %></p>
-      <p><%= site.info %></p>
-      <img src="/img/<%= site.file %>.jpg" alt="picture">
-      <p><%= site.activities %></p>
-    </div>
-  </article>
+  <%- include('./partials/header-subpages.ejs') %>
+  <main>
+    <article class="content details">
+      <h2><%= site.name %></h2>
+      <div class="main-content">
+        <address><%= site.address %><br><%= site.city %>, <%= site.state %> <%= site.zip %></address>
+        <p><%= site.phone %></p>
+        <p>Coordinates: <%= site.lat %>, <%= site.long %></p>
+        <p><%= site.info %></p>
+        <img src="/img/<%= site.file %>.jpg" alt="picture">
+        <p><%= site.activities %></p>
+      </div>
+    </article>
+  </main>
   <%- include('./partials/footer.ejs') %>
 
 </body>
