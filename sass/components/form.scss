@@ -1,0 +1,35 @@
+label,
+input,
+textarea {
+  display: block;
+  width: 100%;
+}
+
+input,
+textarea {
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+select {
+  margin-bottom: 15px;
+}
+
+label {
+  margin-bottom: 4px;
+}
+
+button {
+  background-color: #344726;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: inherit;
+  transition: .4s linear;
+
+  &:hover,
+  &:focus {
+    background-color: #0d1a0f;
+  }
+}

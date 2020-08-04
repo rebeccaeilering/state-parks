@@ -45,6 +45,10 @@ const siteSchema = new Schema({
   activities: {
     type: String,
     required: true
+  },
+  link: {
+    type: String,
+    required: true
   }
 }, { timestamps: true});
 

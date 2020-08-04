@@ -5,6 +5,7 @@
   <%- include('../partials/header-subpages.ejs') %>
   <main>
     <article class="content add-site">
+      <h2>Add A Site</h2>
       <form action="/sites" method="POST">
         <label for="name">Site Name</label>
         <input type="text" id="name" name="name" required>
@@ -15,7 +16,7 @@
         <label for="state">State</label>
         <select name="state" id="state">
           <option value="" selected>Please choose</option>
-          <option value="Illinois">IL</option>
+          <option value="IL">IL</option>
         </select>
         <label for="zip">Zip Code</label>
         <input type="text" id="zip" name="zip" required>
@@ -27,10 +28,12 @@
         <input type="text" id="long" name="long" required>
         <label for="info">Information</label>
         <textarea name="info" id="info" cols="30" rows="10"></textarea>
-        <label for="file">File Path</label>
+        <label for="file">File Name</label>
         <input type="text" id="file" name="file" required>
         <label for="activities">Activities</label>
         <textarea name="activities" id="activities" cols="30" rows="10"></textarea>
+        <label for="link">Link Url</label>
+        <input type="text" id="link" name="link" required>
         <button>Submit</button>
       </form>
     </article>
