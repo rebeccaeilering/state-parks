@@ -1,0 +1,49 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: -50px;
+  color: #fff;
+  text-align: center;
+
+  .tagline {
+    font-size: 60px;
+    font-family: 'Overlock SC', cursive;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+  }
+
+  .sub-tagline {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  i.fas {
+    font-size: 36px;
+    color: #c29d22;
+    animation-name: hvr-bob;
+    animation-duration: 1.5s;
+    animation-delay: .3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
