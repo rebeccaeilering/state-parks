@@ -4,11 +4,11 @@ const mongoose = require('mongoose');
 const siteRoutes = require('./routes/siteRoutes');
 const { render } = require('ejs');
 var path = require('path');
+require('dotenv/config');
 
 const app = express();
 
-const dbURI = 'mongodb+srv://RebeccaE:BMy82XLnb@fzUx2@cluster0-qki7u.mongodb.net/state-parks?retryWrites=true&w=majority';
-mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((result) => app.listen(3000))
   .catch((err) => console.log(err))
 
