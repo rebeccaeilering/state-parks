@@ -6,16 +6,24 @@
   <main>
     <article class="content sites">
       <h2>All Sites</h2>
-      <% if (sites.length > 0) { %>
-        <% sites.forEach(site => { %>
-          <a class="single" href="/sites/<%= site._id %>">
-            <h3 class="title"><%= site.name %></h3>
-      
-          </a>
-        <% }) %>
-      <% } else { %>
-        <p>There are no sites.</p>
-      <% } %>
+      <ul class="site-list">
+        <% if (sites.length > 0) { %>
+          <% sites.forEach(site => { %>
+            <li>
+              <a href="/sites/<%= site._id %>">
+                <img src="/img/<%= site.file %>.jpg" alt="">
+                <div class="site-info">
+                  <h3 class="title"><%= site.name %></h3>
+                  <span><%= site.city %>, IL</span>
+                </div>
+              </a>
+            </li>
+          <% }) %>
+        <% } else { %>
+          <p>There are no sites.</p>
+        <% } %>
+      </ul>
+
     </article>
   </main>
   <%- include('../partials/footer.ejs') %>

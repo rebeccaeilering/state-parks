@@ -7,13 +7,14 @@
     <article class="content details">
       <h2><%= site.name %></h2>
       <div class="main-content">
-        <address><%= site.address %><br><%= site.city %>, <%= site.state %> <%= site.zip %></address>
+        <address><%= site.address %><br><%= site.city %>, IL <%= site.zip %></address>
         <p><%= site.phone %></p>
         <p>Coordinates: <%= site.lat %>, <%= site.long %></p>
         <p><%= site.info %></p>
-        <img src="/img/<%= site.file %>.jpg" alt="picture">
+        <img src="/img/<%= site.file %>.jpg" alt="">
         <p><%= site.activities %></p>
         <p><a href="<%= site.link %>">Visit <%= site.name %>'s DNR site</a></p>
+        <a href="/">Back to List of Sites</a>
       </div>
     </article>
   </main>
