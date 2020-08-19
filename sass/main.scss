@@ -30,6 +30,10 @@ a {
   color: #344726;
 }
 
+img {
+  max-width: 100%;
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -42,6 +46,10 @@ a {
 
 main {
   background: #e6e3e0;
+
+  a {
+    font-weight: 700;
+  }
 }
 
 
@@ -51,3 +59,4 @@ main {
 @import 'components/content';
 @import 'components/footer';
 @import 'components/site-list';
+@import 'components/site-details';

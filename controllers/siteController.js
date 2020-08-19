@@ -1,7 +1,7 @@
 const Site = require('../models/site');
 
 const site_index = (req, res) => {
-  Site.find().sort({ createdAt: -1 })
+  Site.find().sort({ createdAt: 1 })
   .then((result) => {
     res.render('sites/index', { title: 'All Sites', sites: result})
   })

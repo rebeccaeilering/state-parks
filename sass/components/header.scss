@@ -68,7 +68,7 @@ header {
           left: 0;
           right: 100%;
           bottom: 0;
-          background: #c29d22;
+          background: #d3a818;
           height: 4px;
           // -webkit-transition-property: right;
           transition-property: right;
@@ -79,7 +79,7 @@ header {
         }
 
         &:hover {
-          color: #c29d22;
+          color: #d3a818;
 
           &:before {
             right: 0;
