@@ -6,10 +6,6 @@
   box-sizing: border-box;
 }
 
-// html {
-//   scroll-behavior: smooth;
-// }
-
 body {
   font-size: 18px;
   font-family: 'PT Sans', sans-serif;
@@ -47,6 +43,12 @@ img {
   align-items: center;
   padding: 0 15px;
 }
+
+#mapid { 
+  height: 180px; 
+  margin-bottom: 20px;
+}
+
 
 main {
   background: #e6e3e0;
