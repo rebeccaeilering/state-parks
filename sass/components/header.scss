@@ -8,8 +8,32 @@ header {
   height: 80vh;
   z-index: 0;
 
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &.subpage {
     height: 25vh;
+
+    .container {
+      position: relative;
+      z-index: 900;
+      display: block;
+      height: 100%;
+    }
+
+    .title {
+      position: absolute;
+      left: 15px;
+      bottom: 15px;
+
+      h1 {
+        color: #ffffff;
+        font-size: 48px;
+      }
+    }
   }
 
   &:before {
