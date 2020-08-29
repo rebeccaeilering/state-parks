@@ -24,14 +24,18 @@ header {
       height: 100%;
     }
 
-    .title {
+    .header-title {
       position: absolute;
       left: 15px;
       bottom: 15px;
 
       h1 {
         color: #ffffff;
-        font-size: 48px;
+        font-size: 26px;
+
+        @media screen and (min-width:960px) {
+          font-size: 36px;
+        }
       }
     }
   }

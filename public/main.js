@@ -11,3 +11,12 @@ for (let item of anchorlinks) {
         e.preventDefault()
     })
 }
+
+const pageTitleText = document.querySelector('.page-title').textContent;
+const headerTitle = document.querySelector('.header-title');
+const headingTitle = document.createElement('h1');
+headingTitle.textContent = pageTitleText;
+headerTitle.appendChild(headingTitle);
+
+const contenth2 = document.querySelector('.details .page-title')
+contenth2.innerHTML = `About ${contenth2.innerHTML}`;
