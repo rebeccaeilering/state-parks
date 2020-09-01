@@ -12,7 +12,7 @@
         <p>Coordinates: <%= site.lat %>, <%= site.long %></p>
         <div id="mapid"></div>
         <h2>Contact Us</h2>
-        <p><%= site.phone %></p>
+        <p><a class="btn primary" href="tel:<%= site.phone %>"><i class="fas fa-phone-alt"></i> <%= site.phone %></a></p>
       </div>
       <div class="main-content">
         <img src="/img/<%= site.file %>.jpg" alt="">
@@ -22,7 +22,8 @@
         <p><%= site.activities %></p>
         <h3>Learn More</h3>
         <p><a href="<%= site.link %>">Visit <%= site.name %>'s DNR site</a></p>
-        <a href="/">Back to List of Sites</a>
+        <br>
+        <a class="btn" href="/"><i class="fas fa-arrow-circle-left"></i> Back to List of Sites</a>
       </div>
     </section>
   </main>
