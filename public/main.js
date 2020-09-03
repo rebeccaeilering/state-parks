@@ -20,3 +20,19 @@ headerTitle.appendChild(headingTitle);
 
 const contenth2 = document.querySelector('.details .page-title')
 contenth2.innerHTML = `About ${contenth2.innerHTML}`;
+
+const activitiesString = document.querySelector('.site-activities').textContent;
+const activitiesArray = activitiesString.split(', ');
+const listElement = document.createElement('ul');
+const listContainer = document.querySelector('.activities-list');
+listContainer.appendChild(listElement);
+for (let i = 0; i < activitiesArray.length; i++) {
+  const listItem = document.createElement('li');
+  listItem.innerHTML = activitiesArray[i];
+  listElement.appendChild(listItem);
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+  var elem = document.querySelector('.site-activities');
+  elem.parentNode.removeChild(elem);
+});
