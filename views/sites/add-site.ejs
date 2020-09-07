@@ -14,10 +14,12 @@
         <label for="city">City</label>
         <input type="text" id="city" name="city" required>
         <label for="state">State</label>
-        <select name="state" id="state">
-          <option value="" selected>Please choose</option>
-          <option value="IL">IL</option>
-        </select>
+        <div class="primary-select">
+          <select name="state" id="state">
+            <option value="" selected>Please choose</option>
+            <option value="IL">IL</option>
+          </select>
+        </div>
         <label for="zip">Zip Code</label>
         <input type="text" id="zip" name="zip" required>
         <label for="phone">Phone</label>
@@ -34,7 +36,7 @@
         <textarea name="activities" id="activities" cols="30" rows="10"></textarea>
         <label for="link">Link Url</label>
         <input type="text" id="link" name="link" required>
-        <button>Submit</button>
+        <button class="btn primary">Submit</button>
       </form>
     </article>
   </main>
