@@ -15,7 +15,6 @@
                 <div class="site-info">
                   <h3 class="title"><%= site.name %></h3>
                   <span><%= site.city %>, IL</span>
-                  <%= site.lat %><%= site.long %>
                 </div>
               </a>
             </li>
@@ -32,13 +31,20 @@
     document.addEventListener('DOMContentLoaded', getMap);
 
     function getMap() {
-      const mymap = L.map('homeMapId').setView(['39.836494517397114', '-89.65881995640241'], 8);
+      const mymap = L.map('homeMapId', {
+        center: ['39.836494517397114', '-89.65881995640241'], 
+        zoom: 9,
+        scrollWheelZoom: false
+      });
       const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">Open Street Map</a> contributors';
       const tileURL = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
       const tiles = L.tileLayer(tileURL, {
-        attribution
+        attribution      
       });
       tiles.addTo(mymap);
+      <% sites.forEach(site => { %>
+        L.marker(['<%= site.lat %>', '<%= site.long %>']).addTo(mymap).bindTooltip('<%= site.name %>');
+      <% }) %>
     }
   </script>
 </body>
