@@ -1,0 +1,20 @@
+.map {
+  position: relative;
+  border-top: 40px solid #0d1a0f;
+}
+
+.find-park-badge {
+  position: absolute;
+  top: -95px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0d1a0f;
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+  z-index: 900;
+
+  h2 {
+    color: #d3a818;
+  }
+}
