@@ -1,6 +1,11 @@
-const express = require('express');
+// const express = require('express');
+// const siteController = require('../controllers/siteController');
+// const router = express.Router();
+
+const { Router } = require('express');
 const siteController = require('../controllers/siteController');
-const router = express.Router();
+
+const router = Router();
 
 router.get('/', siteController.site_index);
 router.post('/', siteController.site_add_post);
