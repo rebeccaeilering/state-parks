@@ -4,7 +4,18 @@
   <%- include('./partials/header-subpages.ejs') %>
   <main>
     <article class="content signup">
-      <h2 class="page-title">Sign Up</h2>
+      <section class="form-container">
+        <h2 class="page-title">Sign Up</h2>
+        <form>
+          <label for="email">Email</label>
+          <input type="text" name="email" required />
+          <div class="email error"></div>
+          <label for="password">Password</label>
+          <input type="password" name="password" required />
+          <div class="password error"></div>
+          <button>Sign Up</button>
+        </form>
+      </section>
     </article>
   </main>
   <%- include('./partials/footer.ejs') %>

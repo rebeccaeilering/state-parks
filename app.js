@@ -2,6 +2,8 @@ const express = require('express');
 var sassMiddleware = require('node-sass-middleware');
 const mongoose = require('mongoose');
 const siteRoutes = require('./routes/siteRoutes');
+const authRoutes = require('./routes/authRoutes');
+
 const { render } = require('ejs');
 var path = require('path');
 require('dotenv/config');
@@ -36,6 +38,7 @@ app.get('/about', (req, res) => {
 
 // Site Routes
 app.use('/sites', siteRoutes);
+app.use(authRoutes);
 
 
 app.use((req, res) => {
