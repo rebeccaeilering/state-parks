@@ -13,8 +13,21 @@
   height: 150px;
   border-radius: 150px;
   z-index: 900;
+  border: 5px solid #224127;
 
   h2 {
+    font-family: 'Overlock SC', cursive;
+    text-transform: uppercase;
+    font-weight: 700;
     color: #d3a818;
+    text-align: center;
+    line-height: 32px;
+    font-size: 36px;
+    width: 90px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
   }
 }
