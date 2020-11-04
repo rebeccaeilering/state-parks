@@ -37,23 +37,7 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
   res.render('about', { title: 'About' });
-});
-
-// Cookies
-
-// app.get('/set-cookies', (req, res) => {
-//   // res.setHeader('Set-Cookie', 'newUser=true');
-//   res.cookie('newUser', false);
-//   res.cookie('isEmployee', true, { maxAge: 1000 * 60 * 60 * 24, httpOnly: true });
-//   res.send('you got the cookies!');
-// });
-
-// app.get('/read-cookies', (req, res) => {
-//   const cookies = req.cookies;
-//   console.log(cookies.newUser);
-
-//   res.json(cookies);
-// });
+})
 
 // Site Routes
 app.use('/sites', siteRoutes);
