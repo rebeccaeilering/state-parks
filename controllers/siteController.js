@@ -21,9 +21,9 @@ const site_details = (req, res) => {
   })
 }
 
-const site_add_get = (req, res) => {
-  res.render('sites/add-site', { title: 'Add a new site'});
-}
+// const site_add_get = (req, res) => {
+//   res.render('sites/add-site', { title: 'Add a new site'});
+// }
 
 const site_add_post= (req, res) => {
   const site = new Site(req.body);
@@ -39,6 +39,6 @@ const site_add_post= (req, res) => {
 module.exports = {
   site_index,
   site_details,
-  site_add_get,
+  // site_add_get,
   site_add_post
 }

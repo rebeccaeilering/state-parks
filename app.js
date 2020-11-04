@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const siteRoutes = require('./routes/siteRoutes');
 const authRoutes = require('./routes/authRoutes');
 const cookieParser = require('cookie-parser');
+const { requireAuth } = require('./middleware/authMiddleware');
 
 const { render } = require('ejs');
 var path = require('path');
@@ -37,7 +38,11 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
   res.render('about', { title: 'About' });
-})
+});
+
+app.get('/add-site', requireAuth, (req, res) => {
+  res.render('add-site', { title: 'Add a new site'});
+});
 
 // Site Routes
 app.use('/sites', siteRoutes);
