@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const siteRoutes = require('./routes/siteRoutes');
 const authRoutes = require('./routes/authRoutes');
 const cookieParser = require('cookie-parser');
-const { requireAuth } = require('./middleware/authMiddleware');
+const { requireAuth, checkUser } = require('./middleware/authMiddleware');
 
 const { render } = require('ejs');
 var path = require('path');
@@ -31,6 +31,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
+
+app.get('*', checkUser);
 
 app.get('/', (req, res) => {
   res.redirect('/sites');
