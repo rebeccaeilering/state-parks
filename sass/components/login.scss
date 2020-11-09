@@ -1,0 +1,43 @@
+.login-bar {
+  background-color: #0d1a0f;
+
+  .container {
+    display: flex;
+    justify-content: flex-end;
+
+    .login ul {
+      margin: 0;
+  
+      li {
+        &.user {
+          color: #ffffff;
+          padding: 5px 15px;
+        }
+        
+        a {
+          padding: 5px 15px;
+          display: inline-block;
+          margin-left: 0;
+
+          &.signup-btn {
+            background: #d3a818;
+            color: #000;
+
+            &:hover {
+              background: #224127;
+            }
+          }
+    
+          &:before {
+            content: "";
+            display: none;          
+          }
+    
+          &:hover {
+            color: #d3a818;
+          }
+        }
+      }
+    }
+  }
+}
