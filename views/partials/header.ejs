@@ -5,8 +5,7 @@
         <ul>
         <% if (user) { %>
           <li class="user">Welcome, <%= user.email %></li>
-          <li><a href="/add-site">Add Site</a></li>
-          <li><a href="/logout">Log Out</a></li>
+          <li><a class="logout-btn"href="/logout">Log Out</a></li>
         <% } else { %>
           <li><a href="/login">Log In</a></li>
           <li><a class="signup-btn" href="/signup">Sign Up</a></li>
