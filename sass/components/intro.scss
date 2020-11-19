@@ -10,7 +10,7 @@
 
   .tagline {
     font-size: 60px;
-    font-family: 'Overlock SC', cursive;
+    font-family: $overlock;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 2px;
@@ -24,7 +24,7 @@
 
   i.fas {
     font-size: 36px;
-    color: #d3a818;
+    color: $accent;
     animation-name: hvr-bob;
     animation-duration: 1.5s;
     animation-delay: .3s;

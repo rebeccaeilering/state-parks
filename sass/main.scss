@@ -1,73 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Overlock+SC&family=PT+Sans:wght@400;700&display=swap');
+// Presets
+@import 'presets/variables';
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-size: 18px;
-  color: #000000;
-  font-family: 'PT Sans', sans-serif;
-  background-color: #0d1a0f;
-}
-
-h1 {
-  font-size: 30px;
-}
-
-h2 {
-  margin-bottom: 20px;
-}
-
-p,
-address,
-img {
-  margin-bottom: 15px;
-}
-
-a {
-  color: #344726;
-}
-
-img {
-  max-width: 100%;
-}
-
-ul {
-  margin: 20px 0 20px 20px;
-
-}
-
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 15px;
-}
-
-#mapid { 
-  height: 180px; 
-  margin-bottom: 20px;
-}
-
-#homeMapId {
-  height: 450px; 
-}
-
-
-main {
-  background: #e6e3e0;
-
-  a {
-    font-weight: 700;
-  }
-}
-
+// Comnpoenents
+@import 'components/general';
 @import 'components/helper-classes';
 @import 'components/header';
 @import 'components/buttons';

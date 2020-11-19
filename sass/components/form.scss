@@ -1,5 +1,5 @@
 .form-container {
-  background: #ffffff;
+  background: $white;
   padding: 30px;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
   border-bottom-left-radius: 10px;
@@ -18,14 +18,14 @@ textarea {
   font-size: 18px;
   padding: 8px;
   margin-bottom: 15px;
-  border: 1px solid #000000;
+  border: 1px solid $black;
   border-radius: 4px;
 }
 
 .primary-select {
   position: relative;
-  background: #ffffff;
-  border: 1px solid #000000;
+  background: $white;
+  border: 1px solid $black;
   width: 100%;
   border-radius: 4px;
   overflow: hidden;
@@ -37,9 +37,9 @@ textarea {
     position: absolute;
     right: 8px;
     top: 9px;
-    font-family: 'Font Awesome 5 Free';
+    font-family: $fontawesome;
     font-weight: 900;
-    color: #000000;
+    color: $black;
   }
 }
 
@@ -58,8 +58,8 @@ label {
 }
 
 button {
-  background-color: #344726;
-  color: #ffffff;
+  background-color: $primarylink;
+  color: $white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -68,6 +68,6 @@ button {
 
   &:hover,
   &:focus {
-    background-color: #0d1a0f;
+    background-color: $primary;
   }
 }
