@@ -28,5 +28,9 @@
     @media screen and (min-width: 960px) {
       order: 2;
     }
+
+    .activities-list ul {
+      column-count: 2;
+    }
   }
 }
