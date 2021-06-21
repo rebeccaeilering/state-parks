@@ -1,7 +1,9 @@
+"use strict";
 document.addEventListener("DOMContentLoaded", function () {
-
   // Smooth scroll
   let anchorlinks = document.querySelectorAll('a[href^="#"]')
+
+  
 
   for (let item of anchorlinks) {
     item.addEventListener('click', (e) => {
